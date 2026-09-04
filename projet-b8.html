@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preuves : Datacenter Pédagogique B8 | Romain Guil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .proof-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; margin-top: 3rem; }
+        .proof-item { background: #fff; border-radius: 12px; padding: 2rem; box-shadow: var(--shadow); border-top: 4px solid var(--proxmox-color); }
+        .proof-item img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border-color); margin-top: 1.5rem; cursor: pointer; transition: transform 0.3s ease; }
+        .proof-item img:hover { transform: scale(1.02); }
+        .back-btn { display: inline-block; margin-bottom: 2rem; color: var(--text-light); font-weight: 500; transition: color 0.3s ease; }
+        .back-btn:hover { color: var(--proxmox-color); }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">RG<span>.</span></a>
+        </div>
+    </nav>
+
+    <div class="container section">
+        <a href="index.html#projects" class="back-btn"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
+        
+        <div class="page-header" style="margin-top: 0;">
+            <span class="badge proxmox">Dossier de Preuves E5</span>
+            <h1 style="margin-top: 1rem;">Datacenter <span>B8</span></h1>
+            <p>Mise en place d'une infrastructure complète (Virtualisation, Sécurité, Identité, Supervision).</p>
+        </div>
+
+        <div class="proof-grid">
+            <!-- Virtualisation -->
+            <div class="proof-item">
+                <h3>1. Virtualisation & Haute Disponibilité (Proxmox VE)</h3>
+                <p>Déploiement d'un cluster à 3 nœuds "Bare Metal" pour consolider les ressources. Activation du <strong>Cluster Resource Scheduler (CRS)</strong> et de la migration à chaud (Live Migration) pour garantir une Haute Disponibilité (HA).</p>
+                <img src="assets/images/proxmox-dashboard.png" alt="Dashboard du Cluster Proxmox">
+                <img src="assets/images/datacenter-ha.png" alt="Configuration de la Haute Disponibilité" style="margin-top: 1rem;">
+            </div>
+
+            <!-- Stockage -->
+            <div class="proof-item">
+                <h3>2. Stockage Partagé (TrueNAS & ZFS)</h3>
+                <p>Déploiement d'un NAS TrueNAS utilisant le système de fichiers ZFS. Connexion du NAS à l'Active Directory pour gérer les ACLs (droits d'accès), et intégration de stockages iSCSI/NFS pour le cluster Proxmox.</p>
+                <img src="assets/images/truenas.png" alt="Dashboard TrueNAS ZFS">
+            </div>
+
+            <!-- Identité -->
+            <div class="proof-item" style="border-top-color: var(--windows-color);">
+                <h3 class="text-windows">3. Identité Centralisée (Active Directory & DNS)</h3>
+                <p>Promotion d'un Windows Server en Contrôleur de Domaine (B8ROM). Structuration des Unités d'Organisation (OU) et configuration du DNS pour la résolution de noms internes. Mise en place de GPO (Stratégies de Groupe) pour la redirection des dossiers utilisateurs.</p>
+                <img src="assets/images/ad.png" alt="Structure Active Directory">
+                <img src="assets/images/dns.png" alt="Gestionnaire DNS Windows" style="margin-top: 1rem;">
+            </div>
+
+            <!-- Accès Web & SSO -->
+            <div class="proof-item" style="border-top-color: var(--accent-color);">
+                <h3 class="text-accent">4. Reverse Proxy HTTPS & Portail SSO (Authentik)</h3>
+                <p>Sécurisation des accès web internes via <strong>Nginx Proxy Manager</strong> et des certificats Wildcard générés par notre propre PKI (AD CS). Mise en place d'un portail Single Sign-On (SSO) via <strong>Authentik</strong> pour une authentification unifiée sur tous les services.</p>
+                <img src="assets/images/nginx.png" alt="Nginx Proxy Manager">
+                <img src="assets/images/authentik-dashboard.png" alt="Portail SSO Authentik" style="margin-top: 1rem;">
+            </div>
+
+            <!-- Supervision & Télétravail -->
+            <div class="proof-item">
+                <h3>5. Supervision (Grafana) & Télétravail (Guacamole)</h3>
+                <p>Maintien en Conditions Opérationnelles (MCO) assuré par une stack <strong>Prometheus & Grafana</strong> pour monitorer l'état CPU/RAM/Disque en temps réel. Mise en place de <strong>Apache Guacamole</strong> pour permettre l'accès distant (RDP/SSH) sécurisé via navigateur.</p>
+                <img src="assets/images/grafa-dashboardwindows.png" alt="Dashboard Grafana">
+                <img src="assets/images/guacamole-1.png" alt="Portail Apache Guacamole" style="margin-top: 1rem;">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Romain Guil. Portfolio BTS SIO SISR.</p>
+        </div>
+    </footer>
+</body>
+</html>

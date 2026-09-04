@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romain Guil | Portfolio BTS SIO SISR</title>
+    <meta name="description" content="Portfolio de Romain Guil, étudiant en BTS SIO option SISR. Passionné par l'administration système, les réseaux et la cybersécurité.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="#home" class="logo">RG<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#veille">Veille Tech</a></li>
+                <li><a href="#contact" class="btn-primary-sm">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="container">
+        <div class="page-header">
+            <h1>Romain <span>Guil</span></h1>
+            <h2>Administrateur Système & Réseau</h2>
+            <p>Étudiant en BTS SIO SISR passionné par l'infrastructure, l'automatisation et la cybersécurité. À la recherche de nouveaux défis techniques.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">Voir mes projets</a>
+                <a href="assets/CV_Romain_Guil.pdf" target="_blank" class="btn-secondary"><i class="fas fa-file-pdf"></i> Mon CV</a>
+                <a href="assets/Tableau_Synthese_E5.xlsx" download class="btn-secondary"><i class="fas fa-file-excel"></i> Tableau de synthèse E5</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">À propos de <span>moi</span></h2>
+            <div class="about-grid">
+                <div class="about-text card proxmox-card">
+                    <h3>Mon Profil</h3>
+                    <p>Bonjour et bienvenue sur mon portfolio ! Je m’appelle <strong>Romain Guil</strong>, passionné par l’informatique et les technologies depuis mon plus jeune âge.</p>
+                    <p>Actuellement en deuxième année de <strong>BTS SIO</strong> (Services Informatiques aux Organisations), option <strong>SISR</strong> (Solutions d’Infrastructure, Systèmes et Réseaux), j'ai pour ambition de poursuivre mes études vers une licence professionnelle dans le domaine des réseaux et de la cybersécurité.</p>
+                    
+                    <h3 style="margin-top: 1.5rem;">Mon Parcours</h3>
+                    <p>Issu d’un <strong>Bac Pro RISC</strong> (Réseaux Informatiques et Systèmes Communicants), j’ai consolidé les bases techniques du matériel et des infrastructures. Après un passage par un <strong>BUT Réseaux & Télécoms</strong>, j’ai fait le choix de me réorienter vers le BTS SIO, un cursus plus appliqué qui correspond parfaitement à mon profil de terrain et à ma volonté d'apprendre par la pratique.</p>
+                </div>
+                
+                <div class="about-interests card windows-card">
+                    <h3>Mes centres d'intérêt</h3>
+                    <ul class="interest-list">
+                        <li>
+                            <div class="icon"><i class="fas fa-server"></i></div>
+                            <div>
+                                <h4>Homelab & Infrastructure</h4>
+                                <p>J’aime concevoir, expérimenter et administrer des maquettes et des environnements réseau chez moi.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon"><i class="fas fa-gamepad"></i></div>
+                            <div>
+                                <h4>Jeux vidéo & Hardware</h4>
+                                <p>Joueur régulier, cet univers a très tôt stimulé ma curiosité pour l'optimisation et la gestion des serveurs.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon"><i class="fas fa-dumbbell"></i></div>
+                            <div>
+                                <h4>Sport</h4>
+                                <p>Salle de musculation et escalade. Des pratiques qui m'apportent détermination et rigueur.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Mes <span>Compétences</span></h2>
+            <div class="skills-grid">
+                <div class="card proxmox-card">
+                    <i class="fas fa-network-wired skill-icon"></i>
+                    <h3>Infrastructure & Virtualisation</h3>
+                    <ul>
+                        <li>Cluster Proxmox VE (HA, Live Migration)</li>
+                        <li>Stockage partagé NAS (TrueNAS, ZFS)</li>
+                        <li>Sauvegarde et PRA (Proxmox Backup Server)</li>
+                    </ul>
+                </div>
+                <div class="card windows-card">
+                    <i class="fab fa-windows skill-icon"></i>
+                    <h3>Systèmes Windows & Linux</h3>
+                    <ul>
+                        <li>Administration Active Directory (AD DS, GPO)</li>
+                        <li>Déploiement d'images système (FOG Project)</li>
+                        <li>Sécurité PKI (AD CS) et certificats</li>
+                    </ul>
+                </div>
+                <div class="card roadmap-card">
+                    <i class="fas fa-shield-alt skill-icon"></i>
+                    <h3>Services & Sécurité</h3>
+                    <ul>
+                        <li>Services DNS, DHCP</li>
+                        <li>Reverse Proxy (Nginx) & Load Balancing Web</li>
+                        <li>Portail SSO (Authentik) & Télétravail (Guacamole)</li>
+                    </ul>
+                </div>
+                <div class="card primary-card">
+                    <i class="fas fa-chart-line skill-icon"></i>
+                    <h3>Supervision, Automatisation & DevOps</h3>
+                    <ul>
+                        <li>Stack Prometheus & Grafana</li>
+                        <li>Gestion de parc ITIL (GLPI)</li>
+                        <li>Automatisation & Intégration API (Bot Proxmox)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="soft-skills">
+                <h3>Savoir-être professionnels</h3>
+                <div class="tags">
+                    <span class="tag">Réactivité</span>
+                    <span class="tag">Sérieux et Rigueur</span>
+                    <span class="tag">Tempérament serein</span>
+                    <span class="tag">Sociable</span>
+                    <span class="tag">Anglais (Niveau C1)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Mes <span>Réalisations</span></h2>
+            
+            <div class="project-showcase card proxmox-card">
+                <div class="project-header">
+                    <span class="badge proxmox">Projet Majeur</span>
+                    <h3>Datacenter Pédagogique B8</h3>
+                    <p class="role">Rôle : Spécialiste 1 (Administrateur Système / SysAdmin)</p>
+                </div>
+                <div class="project-body">
+                    <p>Projet de stage intensif visant à refondre, sécuriser et moderniser intégralement l'infrastructure informatique d'une salle de TP au Lycée Chaptal, en simulant une DSI d'entreprise structurée.</p>
+                    <div class="project-features">
+                        <h4>Missions principales :</h4>
+                        <ul>
+                            <li><strong>Virtualisation :</strong> Mise en place d'un cluster Proxmox VE à 3 nœuds avec Haute Disponibilité (HA) et Live Migration.</li>
+                            <li><strong>Identité :</strong> Déploiement d'un Active Directory avec gestion centralisée via GPO et redirections de dossiers.</li>
+                            <li><strong>Sécurité & Accès :</strong> Création d'une PKI interne, Reverse Proxy Nginx en HTTPS, Portail SSO (Authentik) et passerelle de télétravail sécurisée (Apache Guacamole).</li>
+                            <li><strong>Supervision & PRA :</strong> Stack Prometheus/Grafana pour le monitoring temps réel et Proxmox Backup Server pour la sauvegarde incrémentale.</li>
+                        </ul>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="projet-b8.html" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;"><i class="fas fa-search"></i> Voir les détails et preuves (E5)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-showcase card primary-card">
+                <div class="project-header">
+                    <span class="badge windows">Projet Personnel DevOps</span>
+                    <h3>Bot Discord d'Administration Proxmox</h3>
+                    <p class="role">Automatisation & DevOps</p>
+                </div>
+                <div class="project-body">
+                    <p>Déploiement d'un outil complet permettant d'administrer et de superviser un cluster Proxmox à distance, en s'interfaçant directement avec l'API Proxmox.</p>
+                    <div class="project-features">
+                        <h4>Fonctionnalités avancées :</h4>
+                        <ul>
+                            <li><strong>Sécurité stricte :</strong> Système d'authentification par code PIN Master et délégations de permissions granulaires par machine virtuelle (VM/LXC).</li>
+                            <li><strong>Exécution de commandes :</strong> Bridge SSH et QEMU Guest Agent pour exécuter des scripts shell de manière asynchrone directement depuis l'outil de supervision.</li>
+                            <li><strong>Gestion des fichiers :</strong> Mécanismes SFTP complexes permettant l'upload et le téléchargement de fichiers entre l'interface, le NAS et les conteneurs LXC (via montages virtuels automatisés).</li>
+                            <li><strong>Haute-Disponibilité & CI/CD :</strong> Intégration aux fonctions de HA Proxmox et commande de mise à jour automatique récupérant la dernière version depuis GitHub.</li>
+                        </ul>
+                        <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="projet-bot.html" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;"><i class="fas fa-search"></i> Voir les détails et preuves (E5)</a>
+                            <a href="https://github.com/Gigix-commits/proxmox-bot-main" target="_blank" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;"><i class="fab fa-github"></i> Voir le code source sur GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="veille" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Veille <span>Technologique</span></h2>
+            <div class="card roadmap-card">
+                <div class="veille-content">
+                    <div class="veille-icon">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <div class="veille-text">
+                        <h3>Cyberdéfense et Sécurité de la France</h3>
+                        <p>Dans le cadre de mon BTS SIO, j'effectue une veille technologique active sur les enjeux de cybersécurité à l'échelle nationale. Je surveille les menaces émergentes, les stratégies de cyberdéfense de l'État, et les nouvelles normes de sécurité (ANSSI, NIS2).</p>
+                        <p style="margin-bottom: 1.5rem;">Cette veille nourrit mon ambition de me spécialiser dans la sécurité des infrastructures critiques.</p>
+                        <a href="https://app.flus.fr/collections/1854298443196654360" target="_blank" class="btn-primary"><i class="fas fa-external-link-alt"></i> Consulter mon flux Flus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Me <span>Contacter</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info card proxmox-card">
+                    <h3>Discutons de mon profil</h3>
+                    <p>À la recherche d'opportunités dans l'administration système et réseaux ou pour échanger sur mes projets.</p>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:romainguilfr@gmail.com">romainguilfr@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:0769845005">07 69 84 50 05</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>17 rue Jules Vallès, Quimper</span>
+                        </li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#" title="LinkedIn" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Gigix-commits" target="_blank" title="GitHub" class="social-btn"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form card windows-card">
+                    <form action="https://formspree.io/f/mwlkqvzq" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" rows="5" placeholder="Votre message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-100">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Romain Guil. Portfolio BTS SIO SISR.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

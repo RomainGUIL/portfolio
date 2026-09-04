@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preuves : Bot Discord Proxmox | Romain Guil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .proof-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; margin-top: 3rem; }
+        .proof-item { background: #fff; border-radius: 12px; padding: 2rem; box-shadow: var(--shadow); border-top: 4px solid var(--primary-color); }
+        .proof-item img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border-color); margin-top: 1.5rem; cursor: pointer; transition: transform 0.3s ease; }
+        .proof-item img:hover { transform: scale(1.02); }
+        .back-btn { display: inline-block; margin-bottom: 2rem; color: var(--text-light); font-weight: 500; transition: color 0.3s ease; }
+        .back-btn:hover { color: var(--primary-color); }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">RG<span>.</span></a>
+        </div>
+    </nav>
+
+    <div class="container section">
+        <a href="index.html#projects" class="back-btn"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
+        
+        <div class="page-header" style="margin-top: 0; border-top-color: var(--primary-color);">
+            <span class="badge windows">Dossier de Preuves E5</span>
+            <h1 style="margin-top: 1rem;">Bot Discord <span>Proxmox</span></h1>
+            <p>Développement complet d'un bot d'administration système en Python.</p>
+        </div>
+
+        <div class="proof-grid">
+            <!-- Dashboard UI -->
+            <div class="proof-item">
+                <h3>1. Interface Utilisateur & Dashboard (Discord.py)</h3>
+                <p>Création d'une interface utilisateur riche (UI) directement dans Discord utilisant les Embeds, les boutons interactifs et les menus déroulants. Permet de visualiser l'état du cluster Proxmox (RAM, CPU) et l'état des machines virtuelles en temps réel.</p>
+                <img src="assets/images/bot-dashboard.PNG" alt="Dashboard Discord du Bot">
+            </div>
+
+            <!-- Commandes Shell -->
+            <div class="proof-item">
+                <h3>2. Exécution de Scripts Shell & Bridge SSH</h3>
+                <p>Le bot permet d'exécuter des commandes shell directement sur les conteneurs LXC et les VM QEMU de l'infrastructure. Ce mécanisme complexe utilise <strong>Paramiko</strong> (SSH) pour les LXC et l'agent <strong>QEMU Guest Agent</strong> pour contourner les limitations réseaux. Les résultats trop longs sont formatés et renvoyés sous forme de fichiers `.txt` téléchargeables.</p>
+                <img src="assets/images/bot-shell.png" alt="Exécution d'un ping via le Bot">
+            </div>
+
+            <!-- Sécurité -->
+            <div class="proof-item">
+                <h3>3. Sécurité Avancée et Authentification</h3>
+                <p>Implémentation d'un système de sécurité strict. L'exécution de commandes sensibles nécessite la saisie d'un <strong>Code PIN (Master ou dédié à une VM spécifique)</strong> via une modale sécurisée de Discord. Le système de permission repose sur des fichiers JSON gérant les locataires ("Guest") et leurs accès granulaires.</p>
+                <img src="assets/images/bot-security.png" alt="Fenêtre Modale de Code PIN">
+            </div>
+            
+            <!-- Git/CI -->
+            <div class="proof-item">
+                <h3>4. CI/CD & Déploiement Continu</h3>
+                <p>Le bot intègre une fonction d'auto-mise à jour (<code>!update</code>). Lorsqu'elle est déclenchée, le bot exécute un <code>git pull</code> sur son propre dépôt pour récupérer les dernières modifications de code, puis redémarre son propre processus Python silencieusement pour appliquer le patch, minimisant ainsi le temps d'indisponibilité (MCO).</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Romain Guil. Portfolio BTS SIO SISR.</p>
+        </div>
+    </footer>
+</body>
+</html>
